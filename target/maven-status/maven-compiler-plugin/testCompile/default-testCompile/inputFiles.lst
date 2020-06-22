@@ -1,0 +1,5 @@
+/home/abu/Desenvolvimento/Grupo_app_Microservicos/hello-world-microprofile/src/test/java/com/abu/hello/app/HelloControllerMockTest.java
+/home/abu/Desenvolvimento/Grupo_app_Microservicos/hello-world-microprofile/src/test/java/com/abu/hello/local/HelloWorldAppTest.java
+/home/abu/Desenvolvimento/Grupo_app_Microservicos/hello-world-microprofile/src/test/java/com/abu/hello/app/HelloControllerBDDTest.java
+/home/abu/Desenvolvimento/Grupo_app_Microservicos/hello-world-microprofile/src/test/java/com/abu/hello/app/HelloControllerClientTest.java
+/home/abu/Desenvolvimento/Grupo_app_Microservicos/hello-world-microprofile/src/test/java/com/abu/hello/app/HelloControllerTest.java

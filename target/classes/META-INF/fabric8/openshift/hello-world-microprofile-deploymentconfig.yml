@@ -1,0 +1,52 @@
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  labels:
+    app: hello-world-microprofile
+    provider: fabric8
+    version: 0.0.1-SNAPSHOT
+    group: com.abu.hello
+  name: hello-world-microprofile
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    app: hello-world-microprofile
+    provider: fabric8
+    group: com.abu.hello
+  strategy:
+    rollingParams:
+      timeoutSeconds: 3600
+    type: Rolling
+  template:
+    metadata:
+      labels:
+        app: hello-world-microprofile
+        provider: fabric8
+        version: 0.0.1-SNAPSHOT
+        group: com.abu.hello
+    spec:
+      containers:
+      - env:
+        - name: KUBERNETES_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        image: hello/hello-world-microprofile:latest
+        imagePullPolicy: IfNotPresent
+        name: vertx
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        - containerPort: 9779
+          name: prometheus
+          protocol: TCP
+        - containerPort: 8778
+          name: jolokia
+          protocol: TCP
+        securityContext:
+          privileged: false
+  triggers:
+  - type: ConfigChange

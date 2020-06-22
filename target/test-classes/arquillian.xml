@@ -1,0 +1,7 @@
+<arquillian>
+	<container qualifier="jboss-embedded" default="true">
+		<configuration>
+			<property name="managementPort">8080</property>
+		</configuration>
+	</container>
+</arquillian>

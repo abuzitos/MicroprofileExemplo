@@ -1,0 +1,8 @@
+java -jar target/hello-world-microprofile-wildfly.jar
+
+mvn package -Dmaven.test.skip=true
+
+mvn package
+
+sudo netstat -tulpn | grep LISTEN
+

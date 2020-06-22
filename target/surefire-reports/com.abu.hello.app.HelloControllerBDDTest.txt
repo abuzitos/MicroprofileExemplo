@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.abu.hello.app.HelloControllerBDDTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.222 sec
